@@ -1,0 +1,49 @@
+.project-section{
+    padding-top: 100px;
+    z-index: 0;
+}
+.project-wraper{
+    margin:50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.project{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.project img{
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    transition: 400ms ease-in-out;
+}
+.project img:hover{
+    filter: blur(5px);
+    transform: scale(1.03);
+}
+.project-title{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    opacity: 0;
+    color: white;
+    font-weight: 200;
+    transition: 400ms ease-out;
+
+}
+.project:hover .project-title{
+    top: 25px;
+    left: 25px;
+    opacity: 1;
+}
+
+@media (max-width : 690px){
+    .project-wraper{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+}
